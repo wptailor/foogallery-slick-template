@@ -7,7 +7,6 @@
   }
 
   $(function() {
-    console.log( $('.foogallery-foogallery-slick, .foogallery-foogallery-slick-slider-sync') );
     $('.foogallery-foogallery-slick, .foogallery-foogallery-slick-slider-sync').slick();
 
   });
