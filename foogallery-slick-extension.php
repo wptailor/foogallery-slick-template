@@ -115,18 +115,6 @@ if ( !class_exists( 'FooGallery_Slick_Template_FooGallery_Extension' ) ) {
             add_filter( 'foogallery_template_css_ver-foogallery-slick', [ $this, 'override_version' ] );
 
             add_filter( 'foogallery_attachment_html_link_attributes', [$this, 'attachment_html_link_attributes'], 10, 3 );
-
-            //used for auto updates and licensing in premium extensions. Delete if not applicable
-            //init licensing and update checking
-            //require_once( FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_PATH . 'includes/EDD_SL_FooGallery.php' );
-
-            //new EDD_SL_FooGallery_v1_1(
-            //  FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_FILE,
-            //  FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_SLUG,
-            //  FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_VERSION,
-            //  FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_UPDATE_URL,
-            //  FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_UPDATE_ITEM_NAME,
-            //  'FooGallery Slick');
         }
 
         /**
@@ -302,26 +290,6 @@ if ( !class_exists( 'FooGallery_Slick_Template_FooGallery_Extension' ) ) {
                 'preview_css' => FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_URL . 'css/gallery-foogallery-slick.css',
                 'admin_js'    => FOOGALLERY_SLICK_TEMPLATE_FOOGALLERY_EXTENSION_URL . 'js/admin-gallery-foogallery-slick.js',
                 'fields'      => $this->settings_fields(),
-                    // [
-                    //available field types available : html, checkbox, select, radio, textarea, text, checkboxlist, icon
-                    //an example of a icon field used in the default gallery template
-                    //[
-                    //  'id'      => 'border-style',
-                    //  'title'   => __('Border Style', 'foogallery-slick'),
-                    //  'desc'    => __('The border style for each thumbnail in the gallery.', 'foogallery-slick'),
-                    //  'type'    => 'icon',
-                    //  'default' => 'border-style-square-white',
-                    //  'choices' => [
-                    //      'border-style-square-white' => ['label' => 'Square white border with shadow', 'img' => FOOGALLERY_DEFAULT_TEMPLATES_EXTENSION_URL . 'assets/border-style-icon-square-white.png'),
-                    //      'border-style-circle-white' => ['label' => 'Circular white border with shadow', 'img' => FOOGALLERY_DEFAULT_TEMPLATES_EXTENSION_URL . 'assets/border-style-icon-circle-white.png'),
-                    //      'border-style-square-black' => ['label' => 'Square Black', 'img' => FOOGALLERY_DEFAULT_TEMPLATES_EXTENSION_URL . 'assets/border-style-icon-square-black.png'),
-                    //      'border-style-circle-black' => ['label' => 'Circular Black', 'img' => FOOGALLERY_DEFAULT_TEMPLATES_EXTENSION_URL . 'assets/border-style-icon-circle-black.png'),
-                    //      'border-style-inset' => ['label' => 'Square Inset', 'img' => FOOGALLERY_DEFAULT_TEMPLATES_EXTENSION_URL . 'assets/border-style-icon-square-inset.png'),
-                    //      'border-style-rounded' => ['label' => 'Plain Rounded', 'img' => FOOGALLERY_DEFAULT_TEMPLATES_EXTENSION_URL . 'assets/border-style-icon-plain-rounded.png'),
-                    //      '' => ['label' => 'Plain', 'img' => FOOGALLERY_DEFAULT_TEMPLATES_EXTENSION_URL . 'assets/border-style-icon-none.png'),
-                    //  )
-                    //),
-                // )
             ];
 
             $gallery_templates[] = [
