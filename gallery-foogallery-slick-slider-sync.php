@@ -52,15 +52,16 @@ foreach ( $current_foogallery->attachments() as $att ) : ?>
         <?php
         echo $att->html( $args_main );
 
-        if ( !empty($attachment->caption) || !empty($attachment->description) ) {
+        if ( !empty($att->caption) || !empty($att->description) ) {
             $caption = '<div class="slick-item-caption">';
-            if ( !empty($attachment->caption) ) {
-                $caption .= '<h4>' . $attachment->caption . '</h4>';
+            if ( !empty($att->caption) ) {
+                $caption .= '<h4>' . $att->caption . '</h4>';
             }
-            if ( !empty($attachment->description) ) {
-                $caption .= '<p>' . $attachment->description . '</p>';
+            if ( !empty($att->description) ) {
+                $caption .= '<p>' . $att->description . '</p>';
             }
             $caption .= '</div>';
+            echo $caption;
         }
         ?>
     </div>
@@ -76,7 +77,7 @@ foreach ( $current_foogallery->attachments() as $att ) : ?>
         <?= $main_slick; ?>
     </div>
 
-    <div id="foogallery-gallery-nav-<?php echo $current_foogallery->ID; ?>" class="<?php foogallery_build_class_attribute_render_safe( $current_foogallery, 'foogallery-foogallery-slick-nav' ); ?>" data-slick='<?= esc_attr( json_encode( apply_filters( 'foogallery-template-slick-data-attr', $data_slick, 'slider-sync-main' ), JSON_NUMERIC_CHECK ) ); ?>'>
+    <div id="foogallery-gallery-nav-<?php echo $current_foogallery->ID; ?>" class="<?php foogallery_build_class_attribute_render_safe( $current_foogallery, 'foogallery-foogallery-slick-nav' ); ?>" data-slick='<?= esc_attr( json_encode( apply_filters( 'foogallery-template-slick-data-attr', $data_slick, 'slider-sync-nav' ), JSON_NUMERIC_CHECK ) ); ?>'>
         <?= $nav_slick; ?>
     </div>
 </div>
