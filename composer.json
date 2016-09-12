@@ -13,6 +13,6 @@
         }
     ],
     "archive": {
-        "exclude": ["/.*"]
+        "exclude": ["/.editorconfig"]
     }
 }
