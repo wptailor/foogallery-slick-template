@@ -113,8 +113,6 @@ if ( !class_exists( 'FooGallery_Slick_Template_FooGallery_Extension' ) ) {
             add_filter( 'foogallery_located_template-foogallery-slick-slider-sync', [ $this, 'enqueue_dependencies' ] );
             add_filter( 'foogallery_template_js_ver-foogallery-slick', [ $this, 'override_version' ] );
             add_filter( 'foogallery_template_css_ver-foogallery-slick', [ $this, 'override_version' ] );
-
-            add_filter( 'foogallery_attachment_html_link_attributes', [$this, 'attachment_html_link_attributes'], 10, 3 );
         }
 
         /**
