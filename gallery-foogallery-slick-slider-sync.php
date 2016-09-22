@@ -55,7 +55,7 @@ foreach ( $current_foogallery->attachments() as $att ) : ?>
         if ( !empty($att->caption) || !empty($att->description) ) {
             $caption = '<div class="slick-item-caption">';
             if ( !empty($att->caption) ) {
-                $caption .= '<h4>' . $attachment->caption . '</h4>';
+                $caption .= '<h4>' . $att->caption . '</h4>';
             }
             if ( !empty($att->description) ) {
                 $caption .= '<p>' . $att->description . '</p>';
