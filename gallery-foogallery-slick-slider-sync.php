@@ -51,9 +51,8 @@ foreach ( $current_foogallery->attachments() as $att ) : ?>
     <div>
         <?php
         echo $att->html( $args_main );
-
         if ( !empty($att->caption) || !empty($att->description) ) {
-            $caption = '<div class="slick-item-caption">';
+            $caption = '<div class="foogallery-item-caption foogallery-item-caption-slick-sync">';
             if ( !empty($att->caption) ) {
                 $caption .= '<h4>' . $att->caption . '</h4>';
             }
@@ -61,6 +60,8 @@ foreach ( $current_foogallery->attachments() as $att ) : ?>
                 $caption .= '<p>' . $att->description . '</p>';
             }
             $caption .= '</div>';
+
+            echo $caption;
         }
         ?>
     </div>
